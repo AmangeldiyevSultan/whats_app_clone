@@ -20,12 +20,17 @@ class _VideoViewPageState extends State<VideoViewPage> {
     // TODO: implement dispose
     super.dispose();
     _videoPlayerController.dispose();
+    _videoPlayerController.setLooping(true);
+    _videoPlayerController.play();
   }
 
   @override
   void initState() {
     super.initState();
+    print("VIDEO FORMAT");
+    print(widget.path);
     _videoPlayerController = VideoPlayerController.file(File(widget.path))
+      // _videoPlayerController = VideoPlayerController.network('https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {
