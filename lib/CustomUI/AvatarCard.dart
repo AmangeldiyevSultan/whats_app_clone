@@ -12,7 +12,7 @@ class AvatarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: Dimensions.width10/5, horizontal: Dimensions.widtht45/5),
+      padding: EdgeInsets.symmetric(vertical: Dimensions.width10/5, horizontal: Dimensions.width45/5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

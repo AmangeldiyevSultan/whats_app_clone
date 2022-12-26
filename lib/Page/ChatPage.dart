@@ -7,33 +7,16 @@ import '../Model/ChatModel.dart';
 import '../utils/colors.dart';
 
 class ChatPage extends StatefulWidget {
-  const ChatPage({Key? key}) : super(key: key);
+  const ChatPage({Key? key, required this.chatmodels,required this.sourceChat}) : super(key: key);
+  final List<ChatModel>? chatmodels;
+  final ChatModel sourceChat;
 
   @override
   State<ChatPage> createState() => _ChatPageState();
 }
 
 class _ChatPageState extends State<ChatPage> {
-  List<ChatModel> chats = [
-    ChatModel(
-        name: "Dev Stack",
-        icon: "person.svg",
-        currentMessage: "Hi everyone",
-        isGroup: false,
-        time: "4:00"),
-    ChatModel(
-        name: "Kishor",
-        icon: "person.svg",
-        currentMessage: "Hi Kishor",
-        isGroup: false,
-        time: "10:00"),
-    ChatModel(
-        name: "Collins",
-        icon: "person.svg",
-        currentMessage: "Hi Collins",
-        isGroup: true,
-        time: "12:00"),
-  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +30,11 @@ class _ChatPageState extends State<ChatPage> {
         child: Icon(Icons.chat),
       ),
       body: ListView.builder(
-        itemCount: chats.length,
+        itemCount: widget.chatmodels!.length,
         itemBuilder: (context, index) {
           return CustomCard(
-            chatModel: chats[index],
+            chatModel: widget.chatmodels![index],
+            sourceChat: widget.sourceChat,
           );
         },
       ),

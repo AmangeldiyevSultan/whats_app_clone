@@ -9,8 +9,9 @@ import 'CustomText.dart';
 
 class CustomCard extends StatelessWidget {
   final ChatModel chatModel;
+  final ChatModel sourceChat;
 
-  const CustomCard({Key? key, required this.chatModel}) : super(key: key);
+  const CustomCard({Key? key, required this.chatModel, required this.sourceChat}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class CustomCard extends StatelessWidget {
             MaterialPageRoute(
                 builder: (context) => IndividualPage(
                       chatModel: chatModel,
+                      sourceChat: sourceChat
                     )));
       },
       child: Column(

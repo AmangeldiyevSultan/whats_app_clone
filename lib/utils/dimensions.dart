@@ -29,7 +29,7 @@ class Dimensions {
   static double width30 = screenWidth / 13.09;
   static double width36 = screenWidth / 10.9090889;
   static double width38 = screenWidth / 10.3349263;
-  static double widtht45 = screenWidth / 8.7272;
+  static double width45 = screenWidth / 8.7272;
 
   //dynamic size font
   static double font13 = screenHeight / 56.7272692;
@@ -38,15 +38,17 @@ class Dimensions {
   static double font26 = screenHeight / 28.3636346;
 
   //dynamic height radius
-  static double radius20 = screenHeight / 36.87;
+  static double radius8 = screenHeight / 92.1818125;
   static double radius15 = screenHeight / 49.16;
+  static double radius20 = screenHeight / 36.87;
   static double radius30 = screenHeight / 24.58;
 
   //dynamic size icon
-  static double iconSize24 = screenHeight / 30.7272;
-  static double iconSize32 = screenHeight / 23.0454531;
   static double iconSize15 = screenHeight / 49.16;
   static double iconSize16 = screenHeight / 46.0909062;
+  static double iconSize20 = screenHeight / 26.872725;
+  static double iconSize24 = screenHeight / 30.7272;
+  static double iconSize32 = screenHeight / 23.0454531;
 
   // list View size
   static double listViewImgSize120 = screenWidth / 3.27272667;

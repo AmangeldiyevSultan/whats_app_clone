@@ -41,7 +41,7 @@ class CameraViewPage extends StatelessWidget {
                 width: Dimensions.screenWidth,
                 padding: EdgeInsets.symmetric(
                     vertical: Dimensions.height10 / 2,
-                    horizontal: Dimensions.widtht45 / 5),
+                    horizontal: Dimensions.width45 / 5),
                 child: TextFormField(
                   textAlignVertical: TextAlignVertical.center,
                   maxLines: 6,
